@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Weather Advisor</h1>
+        
+        <div class="weather-form">
+            <label for="weather">What is the weather like today?</label>
+            <select id="weather" class="weather-select">
+                <option value="">-- Select weather --</option>
+                <option value="sunny">Sunny</option>
+                <option value="windy">Windy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+                <option value="cloudy">Cloudy</option>
+            </select>
+            
+            <button class="weather-btn" onclick="btnPressed()">Get Advice</button>
+            
+            <div class="weather-advice">
+                <p id="outputText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function btnPressed(){
+            const weather = document.getElementById("weather").value;
+            const outputText = document.getElementById("outputText");
+            let advice = "";
+
+            if (!weather) {
+                outputText.textContent = "Please select a weather condition";
+                outputText.className = "error";
+                return;
+            }
+
+            switch(weather) {
+                case "sunny":
+                    advice = "Wear sunglasses and sunscreen. Stay hydrated!";
+                    break;
+                case "windy":
+                    advice = "Hold onto your hat! Beware of flying debris.";
+                    break;
+                case "rainy":
+                    advice = "Don't forget your umbrella and waterproof shoes.";
+                    break;
+                case "snowy":
+                    advice = "Wear a warm coat, boots, and gloves. Drive safely!";
+                    break;
+                case "cloudy":
+                    advice = "It might rain, so be prepared. Great day for photos!";
+                    break;
+                default:
+                    advice = "Weather not recognized.";
+            }
+            
+            outputText.innerHTML = `<strong>Weather Advice:</strong> ${advice}`;
+            outputText.className = "advice-text";
+        }
+    </script>
+</body>
+</html>
