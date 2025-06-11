@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Calculator</title>
 </head>
 <body>
@@ -14,30 +14,31 @@
             </td>
         </tr>
         <tr>
-            <td onclick="digitBtnPressed(7)">7</td>
-            <td onclick="digitBtnPressed(8)">8</td>
-            <td onclick="digitBtnPressed(9)">9</td>
-            <td onclick="operetorBtnPressed('*')">*</td>
+            <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
+            <td class="digitButton" onclick="digitBtnPressed(8)">8</td>
+            <td class="digitButton" onclick="digitBtnPressed(9)">9</td>
+            <td class="operatorButton" onclick="operetorBtnPressed('*')">*</td>
         </tr>
         <tr>
-            <td onclick="digitBtnPressed(4)">4</td>
-            <td onclick="digitBtnPressed(5)">5</td>
-            <td onclick="digitBtnPressed(6)">6</td>
-            <td onclick="operetorBtnPressed('-')">-</td>
+            <td class="digitButton"  onclick="digitBtnPressed(4)">4</td>
+            <td class="digitButton"  onclick="digitBtnPressed(5)">5</td>
+            <td class="digitButton"  onclick="digitBtnPressed(6)">6</td>
+            <td class="operatorButton" onclick="operetorBtnPressed('-')">-</td>
         </tr>
         <tr>
-            <td onclick="digitBtnPressed(1)">1</td>
-            <td onclick="digitBtnPressed(2)">2</td>
-            <td onclick="digitBtnPressed(3)">3</td>
-            <td onclick="operetorBtnPressed('+')">+</td>
+            <td class="digitButton"  onclick="digitBtnPressed(1)">1</td>
+            <td class="digitButton"  onclick="digitBtnPressed(2)">2</td>
+            <td class="digitButton"  onclick="digitBtnPressed(3)">3</td>
+            <td class="operatorButton" onclick="operetorBtnPressed('+')">+</td>
         </tr>   
         <tr>
-            <td colspan="2" onclick="digitBtnPressed">0</td>
-            <td onclick="btnACPressed()">AC</td>
-            <td onclick="operetorBtnPressed('/')">/</td>
+            <td class="digitButton"  colspan="2" onclick="digitBtnPressed">0</td>
+            <td class="ACButton"  onclick="btnACPressed()">AC</td>
+            <td class="operatorButton" onclick="operetorBtnPressed('/')">/</td>
         </tr>
         <tr>
-            <td colspan="4"  onclick="equalBtnPressed()">=</td>
+            <td class="operatorButton"colspan="4"  onclick="equalBtnPressed()">=</td>
+        </tr>
     </table>
 
     <script>
